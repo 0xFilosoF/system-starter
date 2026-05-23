@@ -12,10 +12,12 @@ STARTER_CLONE_DIR="${CLONE_DIR:-${STARTER_CLONE_DIR}}"
 STARTER_CFG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
 STARTER_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/system-starter"
 STARTER_PACMAN_CMD=${STARTER_CLONE_DIR}/utils/pm.sh
+STARTER_AUR_LIST=("paru")
 
 export STARTER_CLONE_DIR
 export STARTER_CFG_DIR
 export STARTER_CACHE_DIR
+export STARTER_AUR_LIST
 
 pkg_installed() {
     local pkg_in=$1
