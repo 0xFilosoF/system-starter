@@ -4,9 +4,9 @@
 #|-/ /--| 0xFilosoF                           |-/ /--|#
 #|/ /---+-------------------------------------+/ /---|#
 
-scrDir=$(dirname "$(realpath "$0")")
+SRC_DIR=$(dirname "$(realpath "$0")")
 # shellcheck disable=SC1091
-if ! source "${STARTER_SRC_DIR}/global_fn.sh"; then
+if ! source "${SRC_DIR}/global_fn.sh"; then
     echo "Error: unable to source global_fn.sh..."
     exit 1
 fi

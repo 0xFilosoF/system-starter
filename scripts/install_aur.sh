@@ -4,9 +4,9 @@
 #|-/ /--| 0xFilosof                                 |-/ /--|#
 #|/ /---+-------------------------------------------+/ /---|#
 
-scrDir=$(dirname "$(realpath "$0")")
+SRC_DIR=$(dirname "$(realpath "$0")")
 # shellcheck disable=SC1091
-if ! source "${STARTER_SRC_DIR}/global_fn.sh"; then
+if ! source "${SRC_DIR}/global_fn.sh"; then
     echo "Error: unable to source global_fn.sh..."
     exit 1
 fi
@@ -37,7 +37,7 @@ fi
 
 cd "$HOME/Projects/${aurhlpr}" || exit
 # shellcheck disable=SC2154
-if makepkg "${use_default}" -si; then
+if makepkg --noconfirm -si; then
     print_log -sec "AUR" -stat "installed" "${aurhlpr} aur helper..."
     exit 0
 else
