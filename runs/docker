@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+TARGET_USER="${SUDO_USER:-$USER}"
+
+if ! command -v docker >/dev/null 2>&1; then
+  echo ":: Installing docker..."
+  paru -S docker docker-compose docker-buildx --noconfirm --needed
+else
+  echo ":: docker is already installed."
+fi
+
+sudo systemctl enable --now docker.service
+
+if ! groups "$TARGET_USER" | grep -qw docker; then
+  sudo usermod -aG docker "$TARGET_USER"
+  echo ":: user '$TARGET_USER' added to docker group."
+  echo ":: log out and log back in, or run: newgrp docker"
+fi

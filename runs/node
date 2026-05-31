@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+NVM_DIR="$HOME/.nvm"
+
+if [[ ! -d $NVM_DIR ]]; then
+  echo ":: Installing nvm..."
+  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+else
+  echo ":: nvm is already installed."
+fi
+
+nvm install --lts
+nvm use default
+npm i -g pnpm bun deno @nomicfoundation/solidity-language-server

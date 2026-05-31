@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+if grep -qi asus /sys/class/dmi/id/sys_vendor; then
+  sudo pacman -S --needed linux-firmware amd-ucode nvidia-utils vulkan-icd-loader # or intel-ucode
+
+  if ! grep -q '^\[g14\]' /etc/pacman.conf; then
+    sudo pacman-key --recv-keys 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+    sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+    sudo pacman-key --lsign-key 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+    sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+
+    sudo tee -a /etc/pacman.conf > /dev/null <<'EOF'
+
+[g14]
+Server = https://arch.asus-linux.org
+EOF
+
+    sudo pacman -Suy
+  fi
+
+  sudo pacman -S --needed asusctl supergfxctl power-profiles-daemon 
+  systemctl enable --now power-profiles-daemon.service supergfxd.service
+
+  NVIDIA_POWER_REPO=${XDG_PROJECTS_DIR:-$HOME/Projects}/nvidia-laptop-power
+
+  if [[ ! -d $NVIDIA_POWER_REPO ]]; then
+    git clone https://gitlab.com/asus-linux/nvidia-laptop-power-cfg.git $NVIDIA_POWER_REPO
+    makepkg -D $NVIDIA_POWER_REPO -sfi
+  fi
+
+  systemctl enable nvidia-suspend.service nvidia-hibernate.service nvidia-resume.service
+  systemctl enable --now nvidia-powerd
+fi
+

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+PYENV_DIR="$HOME/.pyenv" 
+
+if [[ ! -d $PYENV_DIR ]]; then
+  echo ":: Installing pyenv..."
+  curl -fsSL https://pyenv.run | bash
+else
+  echo ":: pyenv is already installed."
+fi
+
+curl -fsSL https://astral.sh/uv/install.sh | sh

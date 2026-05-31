@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+paru -S protobuf --noconfirm --needed
+go install github.com/go-delve/delve/cmd/dlv@latest

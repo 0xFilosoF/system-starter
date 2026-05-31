@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+DRAGON_REPO=${XDG_PROJECTS_DIR:-$HOME/Projects}/dragon
+
+if [[ ! -d $DRAGON_REPO ]]; then
+  echo ":: Installing dragon..."
+  git clone https://github.com/mwh/dragon $DRAGON_REPO
+  make -C $DRAGON_REPO install
+else
+  echo ":: dragon is already installed."
+fi
