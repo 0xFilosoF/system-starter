@@ -1,0 +1,2 @@
+resources/arcs filter=lfs diff=lfs merge=lfs -text
+resources/assets filter=lfs diff=lfs merge=lfs -text

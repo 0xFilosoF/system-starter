@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2154
 # shellcheck disable=SC1091
-#|---/ /+----------------------------------------+---/ /|#
-#|--/ /-| Script to install pkgs from input list |--/ /-|#
-#|-/ /--| 0xFilosoF                              |-/ /--|#
-#|/ /---+----------------------------------------+/ /---|#
+#|--/ /+----------------------------------------+--/ /|#
+#|-/ /-| Script to install pkgs from input list |-/ /-|#
+#|/ /--+----------------------------------------+/ /--|#
 
 SRC_DIR=$(dirname "$(realpath "$0")")
 if ! source "${SRC_DIR}/global_fn.sh"; then

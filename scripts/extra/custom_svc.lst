@@ -1,0 +1,10 @@
+# Format: service
+
+# Examples:
+# NetworkManager
+# bluetooth
+# sddm
+
+NetworkManager
+bluetooth
+sddm
