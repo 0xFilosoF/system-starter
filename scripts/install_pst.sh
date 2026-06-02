@@ -28,7 +28,7 @@ if pkg_installed sddm; then
         *) sddmtheme="Astronaut" ;;
         esac
 
-        sudo tar -xzf "${CLONE_DIR}/Source/arcs/Sddm_${sddmtheme}.tar.gz" -C "$HOME/Projects"
+        sudo tar -xzf "${CLONE_DIR}/resources/arcs/Sddm_${sddmtheme}.tar.gz" -C "$HOME/Projects"
         "$HOME/Projects/${sddmtheme,,}/init.sh"
         sudo touch /etc/sddm.conf.d/starter.conf.bkp
 
