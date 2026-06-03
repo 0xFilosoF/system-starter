@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if command -v spicetify &>/dev/null; then
+  echo ":: spicetify is already installed."
+else
+  echo ":: Installing spicetify..."
+  curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+fi
