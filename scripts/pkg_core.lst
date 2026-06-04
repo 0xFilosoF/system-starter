@@ -1,0 +1,93 @@
+# --------------------------------------------------- // System
+pipewire                                               # audio/video server
+pipewire-alsa                                          # pipewire alsa client
+pipewire-audio                                         # pipewire audio client
+pipewire-jack                                          # pipewire jack client
+pipewire-pulse                                         # pipewire pulseaudio client
+gst-plugin-pipewire                                    # pipewire gstreamer client
+wireplumber                                            # pipewire session manager
+pavucontrol                                            # pulseaudio volume control
+pamixer                                                # pulseaudio cli mixer
+networkmanager                                         # network manager
+network-manager-applet                                 # network manager system tray utility
+bluez                                                  # bluetooth protocol stack
+bluez-utils                                            # bluetooth utility cli
+blueman                                                # bluetooth manager gui
+brightnessctl                                          # screen brightness control
+playerctl                                              # media controls
+udiskie                                                # manage removable media
+
+# --------------------------------------------------- // Display Manager
+sddm                                                   
+qt5-quickcontrols                                     
+qt5-quickcontrols2                                   
+qt5-graphicaleffects                                
+qt6-declarative 
+qt6-5compat 
+qt6-svg
+qt6-multimedia 
+qt6-multimedia-ffmpeg
+qt6-virtualkeyboard
+gst-plugins-base
+gst-plugins-good
+gst-plugins-bad
+gst-plugins-ugly
+
+# --------------------------------------------------- // Window Manager
+niri                                                   # based wayland compositor
+mako                                                   # notification daemon
+fuzzel                                                 # application launcher
+waybar                                                 # system bar
+awww                                                   # wallpaper
+wlogout                                                # logout menu
+# grim                                                   # screenshot tool
+# slurp                                                  # region select for screenshot/screenshare
+# satty                                                  # Modern Screenshot Annotation
+cliphist                                               # clipboard manager
+wl-clip-persist                                        # Keep Wayland clipboard even after programs close (avoids crashes)
+
+# --------------------------------------------------- // Dependencies
+polkit-gnome                                           # authentication agent
+gnome-keyring
+xwayland-satellite 
+xdg-desktop-portal-gnome                               
+xdg-desktop-portal-gtk                                 # file picker and dbus  integration
+matugen
+xdg-user-dirs                                          # Manage user directories like ~/Desktop and ~/Music
+pacman-contrib                                         # for system update check
+parallel                                               # for parallel processing
+jq                                                     # for json processing
+imagemagick                                            # for image processing
+qt5-imageformats                                       # for dolphin image thumbnails
+ffmpegthumbs                                           # for dolphin video thumbnails
+kde-cli-tools                                          # for dolphin file type defaults
+libnotify                                              # for notifications
+noto-fonts-emoji                                       # emoji font
+
+# --------------------------------------------------- // Theming
+nwg-look                                               # gtk configuration tool
+qt5ct                                                  # qt5 configuration tool
+qt6ct                                                  # qt6 configuration tool
+adw-gtk3
+adwaita-icon-theme
+adwaita-qt5
+adwaita-qt6
+kvantum                                                # svg based qt6 theme engine
+kvantum-qt5                                            # svg based qt5 theme engine
+qt5-wayland                                            # wayland support in qt5
+qt6-wayland                                            # wayland support in qt6
+
+# --------------------------------------------------- // Applications
+firefox                                                # browser
+ghostty                                                # terminal
+dolphin                                                # kde file manager
+ark                                                    # kde file archiver
+unzip                                                  # extracting zip files
+vim                                                    # terminal text editor
+neovim                                                 # terminal text editor v2
+nwg-displays                                           # monitor management utility
+fzf                                                    # Command-line fuzzy finder
+
+# --------------------------------------------------- // Shell
+zsh                                                    # base shell
+fastfetch                                              # system information fetch tool
