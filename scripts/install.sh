@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2154
-#|---/ /+--------------------------+---/ /|#
-#|--/ /-| Main installation script |--/ /-|#
-#|-/ /--| 0xFilosoF                |-/ /--|#
-#|/ /---+--------------------------+/ /---|#
+#|--/ /+--------------------------+--/ /|#
+#|-/ /-| Main installation script |-/ /-|#
+#|/ /--+--------------------------+/ /--|#
 
 cat <<"EOF"
 
@@ -127,3 +126,70 @@ fi
 # install packages from the list #
 #--------------------------------#
 "${STARTER_SRC_DIR}/install_pkg.sh" "${STARTER_SRC_DIR}/install_pkg.lst"
+if nvidia_detect; then
+  "${STARTER_SRC_DIR}/extra/update_mod.sh"
+fi
+
+#---------------------------#
+# resources custom configs  #
+#---------------------------#
+cat <<"EOF"
+
+ ___ ___ ___ ___ _ _ ___ ___ ___ ___ 
+|  _| -_|_ -| . | | |  _|  _| -_|_ -|
+|_| |___|___|___|___|_| |___|___|___|
+
+
+EOF
+
+"${STARTER_SRC_DIR}/install_rsr.sh"
+print_log -g "[generate] " "cache ::" "Wallpapers..."
+# TODO: load wallpapers
+# git clone --recurse-submodules <repo-url>
+
+#---------------------#
+# post-install script #
+#---------------------#
+cat <<"EOF"
+             _      _         _       _ _
+ ___ ___ ___| |_   |_|___ ___| |_ ___| | |
+| . | . |_ -|  _|  | |   |_ -|  _| .'| | |
+|  _|___|___|_|    |_|_|_|___|_| |__,|_|_|
+|_|
+
+EOF
+
+"${STARTER_SRC_DIR}/install_pst.sh"
+
+#----------------#
+# run commands   #
+#----------------#
+for file in "$STARTER_CLONE_DIR"/runs/*; do
+  [ -f "$file" ] && [ -x "$file" ] && "$file"
+done
+
+#------------------------#
+# enable system services #
+#------------------------#
+cat <<"EOF"
+                 _
+ ___ ___ ___ _ _|_|___ ___ ___
+|_ -| -_|  _| | | |  _| -_|_ -|
+|___|___|_|  \_/|_|___|___|___|
+
+EOF
+
+"${STARTER_SRC_DIR}/extra/restore_svc.sh"
+
+echo ""
+print_log -g "Installation" " :: " "COMPLETED!"
+print_log -b "Log" " :: " -y "View logs at ${STARTER_CACHE_DIR}/logs/${DATE_LOG}"
+print_log -stat "Starter" "Do you want to reboot the system? (y/N)"
+read -r answer
+
+if [[ "$answer" == [Yy] ]]; then
+  echo "Rebooting system"
+  systemctl reboot
+else
+  echo "The system will not reboot"
+fi
