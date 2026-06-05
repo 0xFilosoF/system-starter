@@ -1,0 +1,60 @@
+# --------------------------------------------------- // System
+# downgrade                                            # downgrade packages
+# trash-cli-git                                        # cli to manage trash files
+# libinput-gestures                                    # actions touchpad gestures using libinput
+# gestures                                             # gui for libinput-gestures
+wttrbar                                                # for weather
+python-requests|wttrbar                                # script dependency
+ddcui                                                  # GUI to control brightness for external monitors
+# power-profiles-daemon                                # for managing power profiles from waybar
+
+# --------------------------------------------------- // Network/VPN
+v2rayn-bin
+wireguard-gui-bin
+
+# --------------------------------------------------- // Applications
+chromium
+neohtop-bin
+bleachbit
+# tableplus
+# dbeaver
+
+# --------------------------------------------------- // Hardware
+solaar                                                 # Logitech mouse driver
+
+# --------------------------------------------------- // Shell
+codelldb
+protobuf
+tree-sitter-cli
+bat|zsh
+eza|zsh
+duf|zsh                                                # prettier version of df for zsh
+zoxide|zsh
+ripgrep|zsh
+eza|zsh
+fd|zsh
+
+# --------------------------------------------------- // Misc
+wf-recorder                                            # Screen recorder for wlroots-based compositors such as sway
+kimageformats                                          # plugin for heif/heic and other image formats' support(thumbnail,etc) in qt-based apps
+obs-studio
+mpv
+shotwell
+eog
+# emote                                                # emoji picker gtk3
+# zbar                                                 # Bar/QR code scanner
+
+# --------------------------------------------------- // Music
+cava                                                   # audio visualizer
+spotify                                                # proprietary music streaming service
+spicetify-cli                                          # cli to customize spotify client
+
+# --------------------------------------------------- // Gaming
+# steam                                                # gaming platform
+# gamemode                                             # daemon and library for game optimizations
+# mangohud                                             # system performance overlay
+# gamescope                                            # micro-compositor for gaming
+# lutris                                               # Lutris is an open source gaming platform for Linux
+
+# --------------------------------------------------- // OSD
+swayosd-git                                            # A GTK based on screen display for keyboard shortcuts like caps-lock and volume

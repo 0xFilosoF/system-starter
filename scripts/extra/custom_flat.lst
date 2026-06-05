@@ -18,6 +18,7 @@ com.termius.Termius                            # Termius
 com.rustdesk.RustDesk                          # RustDesk
 
 # ------------------------------------------- // Social
+org.telegram.desktop
 org.signal.Signal                              # Signal
 com.discordapp.Discord                         # Discord
 dev.vencord.Vesktop                            # Vesktop

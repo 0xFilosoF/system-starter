@@ -86,8 +86,13 @@ unzip                                                  # extracting zip files
 vim                                                    # terminal text editor
 neovim                                                 # terminal text editor v2
 nwg-displays                                           # monitor management utility
-fzf                                                    # Command-line fuzzy finder
 
 # --------------------------------------------------- // Shell
 zsh                                                    # base shell
 fastfetch                                              # system information fetch tool
+fzf                                                    # Command-line fuzzy finder
+wget
+yazi
+btop
+stow
+gum
