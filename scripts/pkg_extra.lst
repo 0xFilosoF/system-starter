@@ -33,6 +33,7 @@ zoxide|zsh
 ripgrep|zsh
 eza|zsh
 fd|zsh
+cloc                                                   # count lines of code
 
 # --------------------------------------------------- // Misc
 wf-recorder                                            # Screen recorder for wlroots-based compositors such as sway
