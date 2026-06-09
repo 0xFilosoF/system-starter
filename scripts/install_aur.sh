@@ -36,7 +36,7 @@ fi
 
 cd "$HOME/Projects/${aurhlpr}" || exit
 # shellcheck disable=SC2154
-if makepkg --noconfirm -si; then
+if makepkg -si; then
     print_log -sec "AUR" -stat "installed" "${aurhlpr} aur helper..."
     exit 0
 else

@@ -68,7 +68,7 @@ noto-fonts-emoji                                       # emoji font
 nwg-look                                               # gtk configuration tool
 qt5ct                                                  # qt5 configuration tool
 qt6ct                                                  # qt6 configuration tool
-adw-gtk3
+adw-gtk-theme
 adwaita-icon-theme
 adwaita-qt5
 adwaita-qt6
@@ -95,4 +95,5 @@ wget
 yazi
 btop
 stow
+go
 gum

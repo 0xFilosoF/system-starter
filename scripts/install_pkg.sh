@@ -77,7 +77,7 @@ install_packages() {
 
     if [[ ${#pkg_array[@]} -gt 0 ]]; then
         print_log -b "[install] " "$pkg_type packages..."
-        $install_cmd --noconfirm -S "${pkg_array[@]}"
+        $install_cmd -S "${pkg_array[@]}"
     fi
 }
 

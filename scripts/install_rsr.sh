@@ -63,4 +63,6 @@ CLONE_DIR="${CLONE_DIR:-$STARTER_CLONE_DIR}"
 print_log -g "[DOTFILES] " -b "extract :: " "dotfiles..."
 rm -rf "${HOME}/dotfiles"
 cp -r "${CLONE_DIR}/dotfiles" "${HOME}/dotfiles"
-stow --dir="${HOME}/dotfiles" .
+mkdir -p "${HOME}/.config"
+cd "$HOME/dotfiles" || exit
+stow .

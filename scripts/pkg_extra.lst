@@ -11,10 +11,11 @@ ddcui                                                  # GUI to control brightne
 # --------------------------------------------------- // Network/VPN
 v2rayn-bin
 wireguard-gui-bin
+transmission-gtk
 
 # --------------------------------------------------- // Applications
 chromium
-neohtop-bin
+neohtop
 bleachbit
 # tableplus
 # dbeaver
@@ -23,16 +24,16 @@ bleachbit
 solaar                                                 # Logitech mouse driver
 
 # --------------------------------------------------- // Shell
-codelldb
+codelldb-bin
 protobuf
 tree-sitter-cli
-bat|zsh
-eza|zsh
-duf|zsh                                                # prettier version of df for zsh
-zoxide|zsh
-ripgrep|zsh
-eza|zsh
-fd|zsh
+bat
+eza
+duf
+zoxide
+ripgrep
+eza
+fd
 cloc                                                   # count lines of code
 
 # --------------------------------------------------- // Misc

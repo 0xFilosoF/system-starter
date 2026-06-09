@@ -3,9 +3,11 @@
 #|-/ /-| Service restore script  |-/ /-|#
 #|/ /---+------------------------+/ /--|#
 
-SRC_DIR="$(dirname "$(realpath "$0")")"
-# shellcheck disable=SC1091
-if ! source "${SRC_DIR}/global_fn.sh"; then
+BASE_DIR=$(dirname "$(realpath "$0")")
+SRC_DIR=$(dirname "$(dirname "$(realpath "$0")")")
+
+source "${SRC_DIR}/global_fn.sh"
+if [ $? -ne 0 ]; then
     echo "Error: unable to source global_fn.sh..."
     exit 1
 fi
@@ -31,6 +33,6 @@ while IFS='|' read -r service context command || [ -n "$service" ]; do
     # Trim whitespace
     service=$(echo "$service" | xargs)
     handle_service "$service"
-done < "${STARTER_SRC_DIR}/extra/custom_svc.lst"
+done < "${BASE_DIR}/custom_svc.lst"
 
 print_log -sec "services" -stat "completed" "service updated successfully"
