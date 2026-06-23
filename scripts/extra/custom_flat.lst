@@ -18,7 +18,6 @@ com.termius.Termius                            # Termius
 com.rustdesk.RustDesk                          # RustDesk
 
 # ------------------------------------------- // Social
-org.telegram.desktop
 org.signal.Signal                              # Signal
 com.discordapp.Discord                         # Discord
 dev.vencord.Vesktop                            # Vesktop
@@ -30,7 +29,7 @@ us.zoom.Zoom                                   # Zoom
 md.obsidian.Obsidian                           # Obsidian
 org.mozilla.Thunderbird                        # Thunderbird
 io.github.alainm23.planify                     # Planify
-localsend.localsend_app                        # LocalSend
+org.localsend.localsend_app                    # LocalSend
 
 # ------------------------------------------- // Image/Graphics
 com.github.PintaProject.Pinta                  # Pinta

@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+if command -v rustc &>/dev/null; then
+  echo ":: rust is already installed."
+else
+  echo ":: Installing rust..."
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
 cargo install stylua --features luajit
 cargo install cargo-audit cargo-deny cargo-edit cargo-sort cargo-udeps --locked

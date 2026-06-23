@@ -18,7 +18,7 @@ EOF
     sudo pacman -Suy
   fi
 
-  sudo pacman -S --needed asusctl supergfxctl power-profiles-daemon 
+  sudo pacman -S --needed g14/asusctl g14/rog-control-center supergfxctl power-profiles-daemon 
   systemctl enable --now power-profiles-daemon.service supergfxd.service
 
   NVIDIA_POWER_REPO=${XDG_PROJECTS_DIR:-$HOME/Projects}/nvidia-laptop-power
