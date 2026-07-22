@@ -51,7 +51,20 @@ else
     print_log -y "[FILEMANAGER]" -b " :: " "Setting $(xdg-mime query default "inode/directory") as default file explorer..."
 fi
 
-if ! pkg_installed flatpak; then
+# shell
+if [[ "$(grep "/${USER}:" /etc/passwd | awk -F '/' '{print $NF}')" != "zsh" ]]; then
+    print_log -sec "SHELL" -stat "change" "shell to zsh..."
+    chsh -s "$(which zsh)"
+else
+    print_log -sec "SHELL" -stat "exist" "zsh is already set as shell..."
+fi
+
+# flatpak
+flatpak_has_apps() {
+    flatpak list --app --columns=application 2>/dev/null | grep -q .
+}
+
+if ! pkg_installed flatpak || ! flatpak_has_apps; then
     echo ""
     print_log -g "[FLATPAK]" -b " list :: " "flatpak application"
     awk -F '#' '$1 != "" {print "["++count"]", $1}' "${STARTER_SRC_DIR}/extra/custom_flat.lst"

@@ -3,17 +3,19 @@
 # trash-cli-git                                        # cli to manage trash files
 # libinput-gestures                                    # actions touchpad gestures using libinput
 # gestures                                             # gui for libinput-gestures
-wttrbar                                                # for weather
-python-requests|wttrbar                                # script dependency
 ddcui                                                  # GUI to control brightness for external monitors
-# power-profiles-daemon                                # for managing power profiles from waybar
+# power-profiles-daemon                                # for managing power profiles 
+tlp
+tlp-pd
+tlp-rdw
 
 # --------------------------------------------------- // Network/VPN
-v2rayn-bin
+throne-bin
 wireguard-gui-bin
 transmission-gtk
 
 # --------------------------------------------------- // Applications
+telegram-desktop
 chromium
 neohtop
 bleachbit
@@ -41,8 +43,8 @@ wf-recorder                                            # Screen recorder for wlr
 kimageformats                                          # plugin for heif/heic and other image formats' support(thumbnail,etc) in qt-based apps
 obs-studio
 mpv
-shotwell
-eog
+loupe
+gthumb
 # emote                                                # emoji picker gtk3
 # zbar                                                 # Bar/QR code scanner
 
@@ -59,4 +61,4 @@ spicetify-cli                                          # cli to customize spotif
 # lutris                                               # Lutris is an open source gaming platform for Linux
 
 # --------------------------------------------------- // OSD
-swayosd-git                                            # A GTK based on screen display for keyboard shortcuts like caps-lock and volume
+# swayosd-git                                          # A GTK based on screen display for keyboard shortcuts like caps-lock and volume
